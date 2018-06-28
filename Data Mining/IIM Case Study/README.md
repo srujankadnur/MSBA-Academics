@@ -1,0 +1,10 @@
+## Problem Statement Summary
+
+#In 2016 XYZ Technology Solutions was hired to find a reliable way to identify earnings manipulators for several Indian banks. Earnings manipulation is a rare occurence (~2.9%) with serious consequences to banks if undetected, as it could lead a bank to provide much riskier loans than it can afford resulting in non-performing assets being included in larger investment portfolios.
+
+#In this situation, it will be important to account for an unbalanced data set and to consider different costs for False Positives vs False Negatives. The trade off to consider is the consequence of providing a riskier than intended loan to an undetected manipulator (FN) versus the consequence of not providing a loan (or providing at less favorable terms) to a falsely identified manipulator (FP). Given that a falsely identified manipulator can request further review (after all, they have every incentive to cooperate with an investigation), whereas no further action would normally happen for an undetected manipulator, we will assign more cost to False Negatives.
+
+#XYZ Technology Solutions decided to follow a similar approach to that of the Beneish Model (https://www.scribd.com/doc/33484680/The-Detection-of-Earnings-Manipulation-Messod-D-Beneish), which includes eight variables common in public financial reporting and which results in an M-score that is generally interpreted as indicating a manipulator if it's less than -2.22. This M-score, is simply the output of the Beneish Model:
+#M Score = -4.840 + 0.920 x DSRI + 0.528 x GMI + 0.404 x AQI + 0.892 x SGI + 0.115 x DEPI - 0.172 x SGAI - 0.327 x LVGI + 4.697 x ACCR
+#This model was developed using US companies (excluding financial product companies, such as banks). Overall, the basic idea of the model should be applicable to the Indian companies being studied (which we will test), but the actual coefficients and cutoff point will likely need to be remodeled. Also, given the rise of ensemble methods like bagging, random forest, and boosting since the development of the Beneish model, these methods should also be explored for potentially greater predictive power.
+
