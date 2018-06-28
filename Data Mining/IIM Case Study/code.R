@@ -1,6 +1,6 @@
 
 
-sample_data= read.csv('C:/Users/rakesh/Desktop/Business  data mining/Assignment 3/sample_data.csv')
+
 
 sample_data
 summary(sample_data)
