@@ -1,5 +1,5 @@
 
-setwd('C:/Users/rakesh/Desktop/Business  data mining/Assignment 6')
+
 
 library(readxl)
 
